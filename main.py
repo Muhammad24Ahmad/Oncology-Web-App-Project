@@ -11,7 +11,6 @@ def index():
 def upload():
     if request.method == 'POST':
         pdf_file = request.files['pdf_file']
-
         # Render a template with success/failure message and download link
         return render_template('result.html', success=True, download_link="/download_report")
         # Handle file upload here
